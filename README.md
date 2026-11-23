@@ -10,6 +10,19 @@ An English-language skill for auditing how agents are evaluated. It helps test w
 
 ### Use with your agent
 
+- **Let your agent install it.** Copy this instruction into an agent that has internet and file access. It will install the skill for the current agent; if it cannot, it should tell you what blocked it rather than claim success:
+
+  ```text
+  Install the audit-your-eval skill from
+  https://github.com/2290445195/audit-your-eval/tree/main/skills/audit-your-eval
+  for the agent we are using in this project. Use the Skills CLI if available;
+  otherwise download its SKILL.md from
+  https://raw.githubusercontent.com/2290445195/audit-your-eval/main/skills/audit-your-eval/SKILL.md
+  and install it in this agent's documented project-level skills directory.
+  Check for an existing installation before changing anything. Afterward,
+  verify the installed file and tell me its location and how to invoke it.
+  ```
+
 - **Recommended: install from the command line.** With [Node.js 22.20+](https://nodejs.org/) installed, run this from your project directory. The [Skills CLI](https://skills.sh/docs/cli) detects supported agents and prompts you to choose where to install the skill:
 
   ```bash
@@ -33,6 +46,18 @@ The skill has no bundled scripts, runtime dependencies, or provider-specific too
 **Audit Your Eval** 是一个评测 Agent 评测方法的 Skill。它帮助你检验评测是否完备，找出误放和误拒，并用独立证据验证修复。支持方法评测、离线评分实验和端到端实验。
 
 ### 使用方式
+
+- **让 Agent 自动安装。** 将下面这段指令复制给支持联网和文件操作的 Agent，它会为当前 Agent 安装 Skill；如果无法完成，应说明受阻原因，而不是声称已安装：
+
+  ```text
+  请为当前项目使用的 Agent 安装 audit-your-eval。
+  Skill 来源：
+  https://github.com/2290445195/audit-your-eval/tree/main/skills/audit-your-eval
+  如果可用，请使用 Skills CLI；否则从
+  https://raw.githubusercontent.com/2290445195/audit-your-eval/main/skills/audit-your-eval/SKILL.md
+  下载 SKILL.md，并安装到该 Agent 文档规定的项目级 skills 目录。
+  操作前先检查是否已安装，不要覆盖已有内容。完成后验证文件，并告诉我安装路径和调用方式。
+  ```
 
 - **推荐：命令行安装。** 安装 [Node.js 22.20+](https://nodejs.org/) 后，在项目目录运行下面的命令。[Skills CLI](https://skills.sh/docs/cli) 会检测支持的 Agent，并让你选择安装位置：
 
