@@ -10,7 +10,14 @@ An English-language skill for auditing how agents are evaluated. It helps test w
 
 ### Use with your agent
 
-- **Agent Skills-compatible clients.** Install the [`audit-your-eval`](skills/audit-your-eval/) directory using your client's skill installation or discovery mechanism. Ask the agent to use `audit-your-eval` by name. [Agent Skills specification](https://agentskills.io/specification)
+- **Recommended: install from the command line.** With [Node.js 22.20+](https://nodejs.org/) installed, run this from your project directory. The [Skills CLI](https://skills.sh/docs/cli) detects supported agents and prompts you to choose where to install the skill:
+
+  ```bash
+  npx skills add 2290445195/audit-your-eval --skill audit-your-eval
+  ```
+
+  Add `-g` to install for your user instead of just the current project.
+- **Other Agent Skills-compatible clients.** Install the [`audit-your-eval`](skills/audit-your-eval/) directory using your client's skill installation or discovery mechanism. Ask the agent to use `audit-your-eval` by name. [Agent Skills specification](https://agentskills.io/specification)
 - **Any agent that accepts text instructions.** Paste the Markdown body of [`SKILL.md`](skills/audit-your-eval/SKILL.md) into a chat, project instruction field, or system prompt. Then provide your audit request and available evidence. Everything needed to follow the workflow is in that one file.
 
 ```text
@@ -23,11 +30,18 @@ The skill has no bundled scripts, runtime dependencies, or provider-specific too
 
 ## 简体中文
 
-**Audit Your Eval** 是一个审计 Agent 评测方法的 Skill。它帮助你检验评测是否测到了它声称衡量的能力，找出误放行和误拒，并用独立证据验证修复。支持方法审计、离线评分实验和端到端实验。
+**Audit Your Eval** 是一个评测 Agent 评测方法的 Skill。它帮助你检验评测是否完备，找出误放和误拒，并用独立证据验证修复。支持方法评测、离线评分实验和端到端实验。
 
 ### 使用方式
 
-- **支持 Agent Skills 的客户端。** 按客户端的安装或发现机制添加 [`audit-your-eval`](skills/audit-your-eval/) 目录，然后按名称调用 `audit-your-eval`。[Agent Skills 规范](https://agentskills.io/specification)
+- **推荐：命令行安装。** 安装 [Node.js 22.20+](https://nodejs.org/) 后，在项目目录运行下面的命令。[Skills CLI](https://skills.sh/docs/cli) 会检测支持的 Agent，并让你选择安装位置：
+
+  ```bash
+  npx skills add 2290445195/audit-your-eval --skill audit-your-eval
+  ```
+
+  添加 `-g` 可改为安装到用户级目录，而非仅当前项目。
+- **其他支持 Agent Skills 的客户端。** 按客户端的安装或发现机制添加 [`audit-your-eval`](skills/audit-your-eval/) 目录，然后按名称调用 `audit-your-eval`。[Agent Skills 规范](https://agentskills.io/specification)
 - **接受文本指令的 Agent。** 把 [`SKILL.md`](skills/audit-your-eval/SKILL.md) 的 Markdown 正文粘贴到对话、项目指令或系统提示词中，然后附上审计请求和已有证据。只需这一个文件即可使用。
 
 ```text
