@@ -1,9 +1,9 @@
 ---
-name: eval-for-eval
+name: audit-your-eval
 description: 'Audit the validity, blind spots, and decision rules of agent evaluations. Use when designing eval counterexamples, investigating false accepts or false rejects, checking judge or benchmark bias, or validating changes to an evaluation method.'
 ---
 
-# Eval for Eval
+# Audit Your Eval
 
 Audit the evaluation method **E** and the decisions it supports. Establish the layer under audit, its version, its claims, and its intended scope. E may include tasks and data, success criteria and constraints, graders or human judges, tools and execution environments, sampling and retries, aggregate metrics, or release rules.
 
